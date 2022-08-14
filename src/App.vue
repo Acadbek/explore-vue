@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="h-screen"></div>
+  <div>dsf</div>
   <Footer />
 </template>
 

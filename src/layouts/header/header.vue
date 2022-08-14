@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header bg-blue-700">
+    <header class="header absolute top-0 z-50 w-full">
       <div class="container">
         <nav class="nav flex items-center justify-between h-[110px]">
           <div>
@@ -45,11 +45,15 @@
         </nav>
       </div>
     </header>
+    <section>
+      <Carousel />
+    </section>
   </div>
 </template>
 
 <script>
 import "./header.css";
+import Carousel from "../../components/carousel-component.vue";
 export default {
   data() {
     return {
@@ -62,5 +66,6 @@ export default {
       ],
     };
   },
+  components: { Carousel },
 };
 </script>
