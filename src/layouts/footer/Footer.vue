@@ -4,7 +4,7 @@
       <div class="flex justify-around">
         <ul class="flex flex-col gap-2 first">
           <li
-            class="not-italic font-normal text-2xl leading-7 text-white destinationInFooter"
+            class="not-italic cursor-pointer font-normal text-2xl leading-7 text-white destinationInFooter"
           >
             Destinations
           </li>
@@ -26,8 +26,8 @@
             Call us
           </li>
           <p class="not-italic font-normal text-base text-white mb-7">
-            +998 97 732 01 97 <br />
-            +998 94 181 01 97
+            <a href="tel:+998 97 732 01 97">+998 97 732 01 97</a><br />
+            <a href="tel: +998 94 181 01 97"> +998 94 181 01 97</a>
           </p>
           <li
             class="destinationInFooter not-italic font-normal text-2xl leading-7 text-white"
@@ -35,7 +35,7 @@
             E-mail us
           </li>
           <p class="not-italic font-normal text-base leading-5 text-white mb-7">
-            hello@samarkandexplore@com
+            <a href="mailto: abc@example.com"> hello@samarkandexplore@com </a>
           </p>
           <li
             class="destinationInFooter not-italic font-normal text-2xl leading-7 text-white"
@@ -108,6 +108,9 @@ export default {
   background-image: url("../../assets/images/footerBg.png");
   ul {
     color: white;
+    li:hover {
+      color: rgb(170, 170, 170);
+    }
   }
   .first {
     li {
