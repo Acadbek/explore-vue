@@ -79,12 +79,12 @@ export default defineComponent({
     // any settings not specified will fallback to the carousel settings
     breakpoints: {
       300: {
-        itemsToShow: 1,
+        itemsToShow: 2,
         snapAlign: "center",
       },
       // 700px and up
       375: {
-        itemsToShow: 1,
+        itemsToShow: 2,
         snapAlign: "center",
       },
       599: {
@@ -118,8 +118,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.carousel{
-	height: 575px;
+.carousel {
+  height: 575px;
 }
 .carousel__prev--in-active,
 .carousel__next--in-active {

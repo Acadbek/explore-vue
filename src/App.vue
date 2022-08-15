@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col">
-    <Header />
-    <Destinations />
+    <!-- <Header /> -->
+    <!-- <Destinations /> -->
     <Tours />
-    <AboutUs />
-    <Blog />
-    <OurServices />
-    <Partner />
-    <Footer />
+    <!-- <AboutUs /> -->
+    <!-- <Blog /> -->
+    <!-- <OurServices /> -->
+    <!-- <Partner /> -->
+    <!-- <Footer /> -->
   </div>
 </template>
 

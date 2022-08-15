@@ -1,5 +1,7 @@
 <template>
-  <div class="aboutUs grid grid-cols-12 mt-[100px]">
+  <div
+    class="aboutUs lg:grid md:grid md:grid-cols-12 lg:grid-cols-12 mt-[100px]"
+  >
     <main class="lg:col-span-4 md:col-span-4 col-span-5">
       <h2
         class="not-italic aboutUsTitle font-normal uppercase text-white text-[100px] mt-[170px] ml-3"
@@ -347,6 +349,11 @@ export default {
       left: 35%;
       border-width: 30px 70px 30px 0;
     }
+  }
+}
+@media (max-width: 970px) {
+  .page {
+    display: none;
   }
 }
 </style>
