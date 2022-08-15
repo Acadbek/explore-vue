@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Header from "./layouts/header/header.vue";
-import Footer from "./layouts/footer/footer.vue";
+import Header from "./layouts/header/Header.vue";
+import Footer from "./layouts/footer/Footer.vue";
 import Destinations from "./components/sections/Destinations.vue";
 import Tours from "./components/sections/Tours.vue";
 import AboutUs from "./components/sections/About-us.vue";
