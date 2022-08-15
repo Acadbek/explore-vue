@@ -1,137 +1,78 @@
 <template>
-  <div class="tours mt-[105px]">
-    <div class="container">
-      <div class="tours-wrapper flex gap-8">
-        <div>
-          <p class="main-desc mt-[270px]">Tours</p>
-          <p
-            class="not-italic description font-normal w-[350px] text-base leading-6 text-black tracking-[0.48px] text-justify"
-          >
-            We invite you to come and explore the Silk Road in Uzbekistan such
-            as magical Samarkand, beautiful Bukhara and mysterious Khiva, but
-            also to feel and enjoy the hospitality of Uzbek people.
-          </p>
-        </div>
-        <div>
-          <Carousel ref="carouselTours" :breakpoints="breakpoints">
-            <Slide v-for="slide in 10" :key="slide">
-              <div class="carousel__item flex gap-[40px]">
-                <img
-                  class="tours-image"
-                  v-for="(item, index) in data"
-                  :key="index"
-                  :src="item.img"
-                  alt=""
-                />
-              </div>
-            </Slide>
-            <template #addons>
-              <div class="absolute top-[250px] left-[150px] flex gap-[400px]">
-                <button @click="prev">
-                  <img
-                    class="rotate-180"
-                    src="../../assets/icons/toursNext.svg"
-                    alt=""
-                  />
-                </button>
-                <button @click="next">
-                  <img src="../../assets/icons/toursNext.svg" alt="" />
-                </button>
-              </div>
-            </template>
-          </Carousel>
-        </div>
+  <div class="container">
+    <div class="flex items-start justify-between">
+      <div class="basis-2/5">text</div>
+      <div>
+        <Carousel :settings="settings" :breakpoints="breakpoints">
+          <Slide v-for="slide in data" :key="slide">
+            <div class="carousel__item mr-2">
+              <img
+                :style="{ height: '875px', width: '411px', objectFit: 'cover' }"
+                :src="slide.img"
+                alt=""
+              />
+            </div>
+          </Slide>
+
+          <template #addons>
+            <Navigation />
+          </template>
+        </Carousel>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import { Carousel, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
-
 import img1 from "../../assets/images/tours1.png";
 import img2 from "../../assets/images/tours2.png";
 import img3 from "../../assets/images/tours3.png";
+import { defineComponent } from "vue";
+import { Carousel, Navigation, Slide } from "vue3-carousel";
+
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
   components: {
     Carousel,
     Slide,
+    Navigation,
   },
-  data() {
-    return {
-      data: [
-        { id: 1, img: img1 },
-        { id: 2, img: img2 },
-        { id: 3, img: img3 },
-      ],
-      breakpoints: {
-        // 700px and up
-        450: {
-          itemsToShow: 0,
-        },
-        700: {
-          itemsToShow: 1,
-        },
-        700: {
-          itemsToShow: 1,
-        },
-        700: {
-          itemsToShow: 1,
-        },
-        // 1024 and up
-        1024: {
-          itemsToShow: 1,
-        },
+  data: () => ({
+    data: [
+      { id: 1, img: img1 },
+      { id: 2, img: img2 },
+      { id: 3, img: img3 },
+      { id: 1, img: img1 },
+      { id: 2, img: img2 },
+      { id: 3, img: img3 },
+    ],
+    // carousel settings
+    settings: {
+      itemsToShow: 3.5,
+      snapAlign: "center",
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
+      // 700px and up
+      700: {
+        itemsToShow: 1,
+        snapAlign: "center",
       },
-    };
-  },
-  methods: {
-    next() {
-      this.$refs.carouselTours.next();
+      // 1024 and up
+      1024: {
+        itemsToShow: 3,
+        snapAlign: "start",
+      },
     },
-    prev() {
-      this.$refs.carouselTours.prev();
-    },
-  },
+  }),
 });
 </script>
 
 <style>
-.tours {
-  background-image: url("../../assets/images/tours.png");
-}
-.carousel__prev--in-active,
+/* .carousel__prev--in-active,
 .carousel__next--in-active {
   display: none;
-}
-.tours-image {
-  /* width: 511px;
-  height: 550px; */
-  /* object-fit: cover; */
-  /* display: flex;
-  justify-content: center;
-  align-items: flex-start; */
-}
-@media (max-width: 1285px) {
-  .tours-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .tours-image {
-    width: 311px;
-    height: 450px;
-  }
-}
-@media (max-width: 700px) {
-  .main-desc {
-    text-align: center;
-  }
-  .description {
-    text-align: center;
-    margin: auto;
-  }
-}
+} */
 </style>

@@ -1,8 +1,10 @@
 <template>
-  <Header />
-  <Destinations />
-  <Tours />
-  <Footer />
+  <div class="flex flex-col">
+    <Header />
+    <Destinations />
+    <Tours />
+    <Footer />
+  </div>
 </template>
 
 <script>

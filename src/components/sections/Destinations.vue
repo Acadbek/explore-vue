@@ -1,5 +1,5 @@
 <template>
-  <div class="destination relative pt-[100px]">
+  <div class="destination">
     <div class="container">
       <div class="flex destination-top justify-between items-center">
         <p
@@ -23,7 +23,12 @@
         </div>
       </div>
     </div>
-    <Carousel ref="carousel" :settings="settings" :breakpoints="breakpoints">
+    <Carousel
+      class="carousel"
+      ref="carousel"
+      :settings="settings"
+      :breakpoints="breakpoints"
+    >
       <Slide v-for="slide in datas" :key="slide.id">
         <div class="carousel__item mr-[25px]">
           <img
@@ -51,7 +56,7 @@
         </div>
       </Slide>
     </Carousel>
-    <div class="container absolute bottom-[-40px]">
+    <!-- <div class="container absolute bottom-[-40px]">
       <div class="flex justify-end w-full items-start">
         <button
           class="z-50 flex items-center justify-center bg-[#c9c9c9] opacity-90 rounded-full w-9 h-9"
@@ -67,7 +72,7 @@
           <img src="../../assets/icons/right.svg" alt="" />
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -329,5 +334,8 @@ export default defineComponent({
 }
 .destination {
   background-image: url("../../assets/images/destination-bg.png");
+}
+.carousel {
+  height: 803px;
 }
 </style>
