@@ -6,8 +6,8 @@
     <!-- <AboutUs /> -->
     <!-- <Blog /> -->
     <!-- <OurServices /> -->
-    <Partner />
-    <!-- <Footer /> -->
+    <!-- <Partner /> -->
+    <Footer />
   </div>
 </template>
 

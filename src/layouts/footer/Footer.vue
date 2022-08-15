@@ -19,7 +19,7 @@
             Tour Agency Blog
           </li>
         </ul>
-        <ul>
+        <ul class="lg:w-[200px] md:w-[200px] w-[200px]">
           <li
             class="not-italic font-normal text-2xl leading-7 text-white destinationInFooter"
           >
@@ -35,7 +35,7 @@
             E-mail us
           </li>
           <p class="not-italic font-normal text-base leading-5 text-white mb-7">
-            <a href="mailto: abc@example.com"> hello@samarkandexplore@com </a>
+            <a href="mailto: abc@example.com"> hello@samar@com </a>
           </p>
           <li
             class="destinationInFooter not-italic font-normal text-2xl leading-7 text-white"
@@ -46,7 +46,9 @@
             50, st Ozod sharq, Samarkand, Uzbekistan
           </p>
         </ul>
-        <div class="flex flex-col items-center justify-start gap-4">
+        <div
+          class="md:flex lg:flex hidden md:flex-col items-center justify-start gap-4"
+        >
           <a href="/">
             <img src="../../assets/icons/logo.svg" alt="" />
           </a>
@@ -119,6 +121,16 @@ export default {
       font-size: 16px;
       line-height: 30px;
       color: #ffffff;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0;
+  }
+  ul {
+    li {
+      font-size: 15px;
     }
   }
 }
