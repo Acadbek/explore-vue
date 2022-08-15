@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="destination relative pt-[100px]">
     <div class="container">
       <div class="flex destination-top justify-between items-center">
         <p
@@ -16,12 +16,14 @@
             :class="{ active: item.id === activeID }"
             :key="index"
           >
-            {{ item.name }}
+            <p class="hover:text-[#1faae6]">
+              {{ item.name }}
+            </p>
           </button>
         </div>
       </div>
     </div>
-    <Carousel :settings="settings" :breakpoints="breakpoints">
+    <Carousel ref="carousel" :settings="settings" :breakpoints="breakpoints">
       <Slide v-for="slide in datas" :key="slide.id">
         <div class="carousel__item mr-[25px]">
           <img
@@ -48,9 +50,24 @@
           </div>
         </div>
       </Slide>
-
-      ...
     </Carousel>
+    <div class="container absolute bottom-[-40px]">
+      <div class="flex justify-end w-full items-start">
+        <button
+          class="z-50 flex items-center justify-center bg-[#c9c9c9] opacity-90 rounded-full w-9 h-9"
+          @click="prev"
+        >
+          <img src="../../assets/icons/left.svg" alt="" />
+        </button>
+        <Pagination />
+        <button
+          class="z-50 flex items-center justify-center bg-[#c9c9c9] opacity-90 rounded-full w-9 h-9"
+          @click="next"
+        >
+          <img src="../../assets/icons/right.svg" alt="" />
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -234,6 +251,12 @@ export default defineComponent({
       this.activeID = id;
       console.log(this.datas);
     },
+    next() {
+      this.$refs.carousel.next();
+    },
+    prev() {
+      this.$refs.carousel.prev();
+    },
   },
 });
 </script>
@@ -303,5 +326,8 @@ export default defineComponent({
     font-size: 15px;
     padding: 5px 10px;
   }
+}
+.destination {
+  background-image: url("../../assets/images/destination-bg.png");
 }
 </style>
