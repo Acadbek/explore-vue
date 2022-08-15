@@ -2,14 +2,16 @@
   <div class="ourServices pt-[130px] mt-24">
     <div class="container">
       <dir class="grid grid-cols-12">
-        <div class="col-span-8">
+        <div class="col-span-7">
           <h2
-            class="not-italic font-normal text-white text-[100px] leading-[90px]"
+            class="not-italic font-normal text-white lg:text-[100px] md:text-[90px] text-[42px] md:leading-[90px] lg:leading-[90px] leading-[40px]"
           >
             What They Says About Our Services
           </h2>
         </div>
-        <div class="btns gap-[20px] flex items-start col-span-4">
+        <div
+          class="btns col-span-5 lg:gap-[20px] md:gap-[20px] gap-0 flex items-start"
+        >
           <button
             @click="prev"
             class="border-white p-4 border rounded-lg active:bg-white"
@@ -126,11 +128,25 @@ export default defineComponent({
       snapAlign: "center",
     },
     breakpoints: {
+      300: {
+        itemsToShow: 1,
+      },
+      400: {
+        itemsToShow: 1,
+      },
       700: {
-        itemsToShow: 2,
+        itemsToShow: 1,
         snapAlign: "center",
       },
       1024: {
+        itemsToShow: 3,
+        snapAlign: "start",
+      },
+      900: {
+        itemsToShow: 2,
+        snapAlign: "start",
+      },
+      1025: {
         itemsToShow: 3,
         snapAlign: "start",
       },
@@ -158,5 +174,9 @@ export default defineComponent({
 .carousel__track {
   display: flex;
   gap: 10px;
+}
+@media (max-width: 1035px) {
+  .ourServices {
+  }
 }
 </style>

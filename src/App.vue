@@ -4,8 +4,8 @@
     <!-- <Destinations /> -->
     <!-- <Tours /> -->
     <!-- <AboutUs /> -->
-    <Blog />
-    <!-- <OurServices /> -->
+    <!-- <Blog /> -->
+    <OurServices />
     <!-- <Partner /> -->
     <!-- <Footer /> -->
   </div>
