@@ -1,18 +1,18 @@
 <template>
   <div class="tours mt-[105px]">
     <div class="container">
-      <div class="grid grid-cols-12 gap-6">
-        <div class="col-span-4">
+      <div class="tours-wrapper flex gap-8">
+        <div>
           <p class="main-desc mt-[270px]">Tours</p>
           <p
-            class="not-italic font-normal w-[350px] text-base leading-6 text-black tracking-[0.48px] text-justify"
+            class="not-italic description font-normal w-[350px] text-base leading-6 text-black tracking-[0.48px] text-justify"
           >
             We invite you to come and explore the Silk Road in Uzbekistan such
             as magical Samarkand, beautiful Bukhara and mysterious Khiva, but
             also to feel and enjoy the hospitality of Uzbek people.
           </p>
         </div>
-        <div class="col-span-8">
+        <div>
           <Carousel ref="carouselTours" :breakpoints="breakpoints">
             <Slide v-for="slide in 10" :key="slide">
               <div class="carousel__item flex gap-[40px]">
@@ -69,6 +69,15 @@ export default defineComponent({
       ],
       breakpoints: {
         // 700px and up
+        450: {
+          itemsToShow: 0,
+        },
+        700: {
+          itemsToShow: 1,
+        },
+        700: {
+          itemsToShow: 1,
+        },
         700: {
           itemsToShow: 1,
         },
@@ -90,7 +99,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style>
 .tours {
   background-image: url("../../assets/images/tours.png");
 }
@@ -99,8 +108,30 @@ export default defineComponent({
   display: none;
 }
 .tours-image {
-  width: 411px;
-  height: 550px;
-  object-fit: cover;
+  /* width: 511px;
+  height: 550px; */
+  /* object-fit: cover; */
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-start; */
+}
+@media (max-width: 1285px) {
+  .tours-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .tours-image {
+    width: 311px;
+    height: 450px;
+  }
+}
+@media (max-width: 700px) {
+  .main-desc {
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+    margin: auto;
+  }
 }
 </style>
