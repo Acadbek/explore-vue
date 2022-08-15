@@ -336,6 +336,6 @@ export default defineComponent({
   background-image: url("../../assets/images/destination-bg.png");
 }
 .carousel {
-  height: 803px;
+  max-height: 803px;
 }
 </style>
