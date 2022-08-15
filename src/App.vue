@@ -2,9 +2,9 @@
   <div class="flex flex-col">
     <!-- <Header /> -->
     <!-- <Destinations /> -->
-    <Tours />
+    <!-- <Tours /> -->
     <!-- <AboutUs /> -->
-    <!-- <Blog /> -->
+    <Blog />
     <!-- <OurServices /> -->
     <!-- <Partner /> -->
     <!-- <Footer /> -->
