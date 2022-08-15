@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="flex tours items-start gap-[100px] mt-[190px]">
-      <div class="basis-2/5">
-        <p class="main-desc mt-[20rem]">Tours</p>
+    <div class="flex tours items-start gap-[100px]">
+      <div class="max-w-[350px]">
+        <p class="main-desc mt-[12rem]">Tours</p>
         <p
           class="not-italic font-normal text-base leading-6 text-black mt-[7px]"
         >
@@ -122,10 +122,19 @@ export default defineComponent({
 .carousel__next--in-active {
   display: none;
 }
+.tours {
+  margin-top: 190px;
+}
 @media (max-width: 978px) {
   .tours {
     display: flex;
     flex-direction: column;
+  }
+  .main-desc {
+    margin: 0;
+  }
+  .tours {
+    margin: 0;
   }
 }
 </style>

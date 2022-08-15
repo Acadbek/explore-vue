@@ -12,8 +12,14 @@
   font-style: normal;
   font-weight: 400;
   font-size: 170px;
-  line-height: 134px;
   letter-spacing: 0.54px;
   color: #31c0ff;
   font-family: "Bebas Neue", cursive;
+}
+
+@media (max-width: 400px) {
+  .main-desc {
+    font-size: 45px;
+    margin-top: 0;
+  }
 }
