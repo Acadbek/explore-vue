@@ -117,7 +117,10 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
+.carousel{
+	height: 575px;
+}
 .carousel__prev--in-active,
 .carousel__next--in-active {
   display: none;

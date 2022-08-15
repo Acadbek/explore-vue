@@ -1,47 +1,53 @@
 <template>
-  <div class="grid grid-cols-12">
-    <main class="col-span-4">text</main>
+  <div class="aboutUs grid grid-cols-12 mt-[100px]">
+    <main class="col-span-4">
+      <div class="not-italic font-normal uppercase text-white text-[90px]">
+        About uS
+      </div>
+    </main>
     <main class="page col-span-8">
-      <div class="container">
-        <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
-          <div class="slides">
-            <h2 v-for="(i, idx) in slides" :key="idx" class="slide">
-              {{ i.id }}
-            </h2>
-          </div>
-          <div class="pagination">
-            <div v-for="(i, idx) in slides" :key="idx" class="item">
-              <div class="dot">
-                <span>{{ i.id }}</span>
-              </div>
+      <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
+        <div class="slides">
+          <h2 v-for="(i, idx) in slides" :key="idx" class="slide"></h2>
+        </div>
+        <div class="pagination">
+          <div v-for="(i, idx) in slides" :key="idx" class="item">
+            <div class="dot">
+              <span>
+                <img
+                  class="overflow-hidden rounded-full border-white border-2"
+                  :src="i.img"
+                  alt=""
+                />
+              </span>
             </div>
           </div>
-          <button class="next">next</button>
-          <button class="prev">prev</button>
         </div>
+        <button class="next">next</button>
+        <button class="prev">prev</button>
       </div>
     </main>
   </div>
 </template>
 
 <script>
+import img1 from "../../assets/images/about-us-carousel1.png";
+import img2 from "../../assets/images/aboutUsCarouselImg.png";
+import img3 from "../../assets/images/aboutUsCarouselImg1.png";
+import img4 from "../../assets/images/aboutUsCarouselImg1.png";
+import img5 from "../../assets/images/aboutUsCarouselImg3.png";
+
 export default {
   data() {
     return {
       slides: [
-        { id: 1 },
-        { id: 2 },
-        { id: 3 },
-        { id: 4 },
-        { id: 5 },
-        { id: 6 },
-        { id: 7 },
-        { id: 8 },
-        { id: 9 },
-        { id: 10 },
-        { id: 11 },
-        { id: 12 },
-        { id: 13 },
+        { id: 1, img: img1 },
+        { id: 2, img: img3 },
+        { id: 3, img: img1 },
+        { id: 4, img: img3 },
+        { id: 2, img: img1 },
+        { id: 3, img: img3 },
+        { id: 4, img: img1 },
       ],
     };
   },
@@ -109,9 +115,9 @@ export default {
             slider.stopAutoplay();
           });
 
-          this.node.addEventListener("mouseleave", function () {
-            slider.startAutoplay();
-          });
+          // this.node.addEventListener("mouseleave", function () {
+          //   slider.startAutoplay();
+          // });
         }
       };
 
@@ -191,10 +197,16 @@ export default {
 </script>
 
 <style lang="scss">
+.aboutUs {
+  height: 100vh;
+  background-position: bottom;
+  width: 100%;
+  background-image: url("../../assets/images/about-us.png");
+}
 .circle-carousel {
+  transform: rotate(-0.25turn);
   position: relative;
-  padding-top: 100%;
-  background: rgba(black, 0.3);
+  padding-top: 71%;
 
   .slides {
     position: absolute;
@@ -215,7 +227,6 @@ export default {
     height: 100%;
     z-index: 0;
     opacity: 0;
-    background: rgba(red, 0.3);
 
     &.active {
       z-index: 1;
@@ -225,14 +236,16 @@ export default {
 
   .pagination {
     position: absolute;
-    top: 50%;
+    top: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 90%;
-    height: 90%;
+    max-width: 635px;
+    max-height: 635px;
+    height: 635px;
+    width: 635px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 1px solid white;
     transition-property: transform;
     transition-timing-function: ease-out;
     // transition-timing-function: cubic-bezier(.5,-.5,.5,1.5);
@@ -244,7 +257,7 @@ export default {
       align-items: center;
       justify-content: center;
       position: absolute;
-      top: 0;
+      top: -4%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 50px;
@@ -253,9 +266,10 @@ export default {
       pointer-events: auto;
       transition: 0.3s;
       background: black;
+      transform: rotate(90deg);
 
       &:hover {
-        transform: translate(-50%, -50%) scale(1.05);
+        // transform: translate(-50%, -50%) scale(1.05);
         cursor: pointer;
         background: white;
         color: black;
@@ -272,8 +286,7 @@ export default {
 
       &.active {
         .dot {
-          background: white;
-          color: black;
+          width: 200px;
         }
       }
     }

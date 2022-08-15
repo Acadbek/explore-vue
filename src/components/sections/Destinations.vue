@@ -1,5 +1,5 @@
 <template>
-  <div class="destination">
+  <div class="destination py-[100px]">
     <div class="container">
       <div class="flex destination-top justify-between items-center">
         <p
