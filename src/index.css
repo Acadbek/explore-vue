@@ -17,9 +17,18 @@
   font-family: "Bebas Neue", cursive;
 }
 
+.aboutUsTitle {
+  font-family: "Bebas Neue", cursive;
+}
+
 @media (max-width: 400px) {
   .main-desc {
     font-size: 45px;
     margin-top: 0;
   }
+}
+
+.blogOverFlowScrollElement::-webkit-scrollbar {
+  width: 5px;
+  background-color: grey;
 }

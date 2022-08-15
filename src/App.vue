@@ -4,6 +4,7 @@
     <Destinations />
     <Tours />
     <AboutUs />
+    <Blog />
     <Footer />
   </div>
 </template>
@@ -14,9 +15,10 @@ import Footer from "./layouts/footer/footer.vue";
 import Destinations from "./components/sections/Destinations.vue";
 import Tours from "./components/sections/Tours.vue";
 import AboutUs from "./components/sections/About-us.vue";
+import Blog from "./components/sections/Blog.vue";
 export default {
   name: "App",
-  components: { Header, Footer, Destinations, Tours, AboutUs },
+  components: { Header, Footer, Destinations, Tours, AboutUs, Blog },
 };
 </script>
 

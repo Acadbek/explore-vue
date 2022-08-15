@@ -1,11 +1,19 @@
 <template>
   <div class="aboutUs grid grid-cols-12 mt-[100px]">
-    <main class="col-span-4">
-      <div class="not-italic font-normal uppercase text-white text-[90px]">
+    <main class="lg:col-span-4 md:col-span-4 col-span-5">
+      <h2
+        class="not-italic aboutUsTitle font-normal uppercase text-white text-[100px] mt-[170px] ml-3"
+      >
         About uS
-      </div>
+      </h2>
+      <p class="not-italic font-semibold text-base leading-7 text-white ml-3">
+        Founded by a team of passionate professionals, Samarkand Explore offers
+        tailor-made trips in Uzbekistan and Central Asia. Our strength lies in
+        our ability to listen and understand your needs and wishes, in order to
+        create a trip that suits you.
+      </p>
     </main>
-    <main class="page col-span-8">
+    <main class="page lg:col-span-8 md:col-span-8">
       <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
         <div class="slides">
           <h2 v-for="(i, idx) in slides" :key="idx" class="slide"></h2>
@@ -23,8 +31,6 @@
             </div>
           </div>
         </div>
-        <button class="next">next</button>
-        <button class="prev">prev</button>
       </div>
     </main>
   </div>
@@ -32,10 +38,7 @@
 
 <script>
 import img1 from "../../assets/images/about-us-carousel1.png";
-import img2 from "../../assets/images/aboutUsCarouselImg.png";
 import img3 from "../../assets/images/aboutUsCarouselImg1.png";
-import img4 from "../../assets/images/aboutUsCarouselImg1.png";
-import img5 from "../../assets/images/aboutUsCarouselImg3.png";
 
 export default {
   data() {
@@ -197,6 +200,9 @@ export default {
 </script>
 
 <style lang="scss">
+.page {
+  overflow: hidden;
+}
 .aboutUs {
   height: 100vh;
   background-position: bottom;
