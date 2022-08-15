@@ -19,7 +19,7 @@
         <div
           v-for="(card, index) in data"
           :key="index"
-          class="card flex gap-[30px] mb-8"
+          class="card flex gap-[30px] mb-8 cursor-pointer"
         >
           <img
             class="w-[300px] h-[225px] object-cover rounded-[20px]"
@@ -27,10 +27,14 @@
             alt=""
           />
           <div>
-            <p class="not-italic font-medium text-xl text-red-900">
+            <p
+              class="not-italic font-medium text-xl text-red-900 hover:text-red-500"
+            >
               {{ card.title }}
             </p>
-            <p class="mt-5 not-italic font-normal text-xl text-gray-900">
+            <p
+              class="mt-5 not-italic font-normal text-xl text-gray-900 hover:text-gray-700"
+            >
               {{ card.desc }}
             </p>
           </div>
