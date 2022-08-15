@@ -5,6 +5,7 @@
     <Tours />
     <AboutUs />
     <Blog />
+    <OurServices />
     <Footer />
   </div>
 </template>
@@ -16,9 +17,18 @@ import Destinations from "./components/sections/Destinations.vue";
 import Tours from "./components/sections/Tours.vue";
 import AboutUs from "./components/sections/About-us.vue";
 import Blog from "./components/sections/Blog.vue";
+import OurServices from "./components/sections/Our-services.vue";
 export default {
   name: "App",
-  components: { Header, Footer, Destinations, Tours, AboutUs, Blog },
+  components: {
+    Header,
+    Footer,
+    Destinations,
+    Tours,
+    AboutUs,
+    Blog,
+    OurServices,
+  },
 };
 </script>
 

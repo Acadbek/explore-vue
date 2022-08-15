@@ -1,9 +1,9 @@
 <template>
   <main class="container">
     <h2 class="main-desc">Blog</h2>
-    <div class="grid grid-cols-12 gap-10">
-      <div class="lg:col-span-5 md:col-span-5 col-span-12">
-        <img src="../../assets/images/blogMainImg.png" alt="" />
+    <div class="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-9 gap-10">
+      <div class="lg:col-span-5 md:col-span-5 col-span-9">
+        <img class="w-full" src="../../assets/images/blogMainImg.png" alt="" />
         <p class="not-italic font-medium text-2xl text-red-900 mt-[25px] mr-0">
           Presentation of our blog.
         </p>
@@ -19,21 +19,21 @@
         <div
           v-for="(card, index) in data"
           :key="index"
-          class="card flex gap-[30px] mb-8 cursor-pointer"
+          class="card lg:flex md:flex block gap-[30px] mb-8 cursor-pointer"
         >
           <img
-            class="w-[300px] h-[225px] object-cover rounded-[20px]"
+            class="lg:w-[300px] md:lg:w-[300px] w-[250px] lg:h-[225px] md:h-[225px] h-[145px] object-cover rounded-[20px]"
             :src="card.img"
             alt=""
           />
           <div>
             <p
-              class="not-italic font-medium text-xl text-red-900 hover:text-red-500"
+              class="not-italic font-medium lg:text-xl md:lg:text-xl text-[20px] text-red-900 hover:text-red-500"
             >
               {{ card.title }}
             </p>
             <p
-              class="mt-5 not-italic font-normal text-xl text-gray-900 hover:text-gray-700"
+              class="lg:mt-5 md:mt-5 mt-2 lg:w-full md:w-full w-[325px] not-italic font-normal lg:text-xl md:lg:text-xl text-[17px] text-gray-900 hover:text-gray-700"
             >
               {{ card.desc }}
             </p>
