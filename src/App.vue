@@ -5,8 +5,8 @@
     <!-- <Tours /> -->
     <!-- <AboutUs /> -->
     <!-- <Blog /> -->
-    <OurServices />
-    <!-- <Partner /> -->
+    <!-- <OurServices /> -->
+    <Partner />
     <!-- <Footer /> -->
   </div>
 </template>

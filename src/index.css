@@ -21,13 +21,6 @@
   font-family: "Bebas Neue", cursive;
 }
 
-@media (max-width: 400px) {
-  .main-desc {
-    font-size: 45px;
-    margin-top: 0;
-  }
-}
-
 .blogOverFlowScrollElement::-webkit-scrollbar {
   width: 5px;
   background-color: grey;
@@ -40,3 +33,23 @@
   font-family: "Bebas Neue", cursive;
   /* font-size: ; */
 }
+
+@media (max-width: 400px) {
+  .main-desc {
+    font-size: 45px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1300px) {
+  .main-desc {
+    font-size: 78px;
+    margin-top: 0;
+  }
+}
+
+/* @media (max-width: 1000px) {
+  .main-desc {
+    font-size: 78px;
+    margin-bottom: 100px;
+  }
+} */
