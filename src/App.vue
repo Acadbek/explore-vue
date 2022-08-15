@@ -6,6 +6,7 @@
     <AboutUs />
     <Blog />
     <OurServices />
+    <Partner />
     <Footer />
   </div>
 </template>
@@ -18,6 +19,7 @@ import Tours from "./components/sections/Tours.vue";
 import AboutUs from "./components/sections/About-us.vue";
 import Blog from "./components/sections/Blog.vue";
 import OurServices from "./components/sections/Our-services.vue";
+import Partner from "./components/sections/Partner.vue";
 export default {
   name: "App",
   components: {
@@ -28,6 +30,7 @@ export default {
     AboutUs,
     Blog,
     OurServices,
+    Partner,
   },
 };
 </script>

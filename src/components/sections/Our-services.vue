@@ -37,7 +37,7 @@
         >
           <Slide v-for="slide in data" :key="slide.id">
             <div
-              class="carousel__item bg-[#DFDFDF] w-[464px] pb-[20px] rounded-2xl pt-[44px] px-[27px]"
+              class="carousel__item mr-[10px] bg-[#DFDFDF] w-[464px] pb-[20px] rounded-2xl pt-[44px] px-[27px]"
             >
               <p class="text-justify">{{ slide.review }}</p>
               <div
@@ -59,8 +59,6 @@
               </div>
             </div>
           </Slide>
-
-          <template #addons> </template>
         </Carousel>
       </div>
     </div>
@@ -123,20 +121,15 @@ export default defineComponent({
         country: "Canada",
       },
     ],
-    // carousel settings
     settings: {
       itemsToShow: 3,
       snapAlign: "center",
     },
-    // breakpoints are mobile first
-    // any settings not specified will fallback to the carousel settings
     breakpoints: {
-      // 700px and up
       700: {
         itemsToShow: 2,
         snapAlign: "center",
       },
-      // 1024 and up
       1024: {
         itemsToShow: 3,
         snapAlign: "start",
@@ -154,7 +147,10 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.carousel {
+  height: 450px;
+}
 .ourServices {
   background-image: url("../../assets/images/Review.png");
   width: 100%;
