@@ -56,23 +56,6 @@
         </div>
       </Slide>
     </Carousel>
-    <!-- <div class="container absolute bottom-[-40px]">
-      <div class="flex justify-end w-full items-start">
-        <button
-          class="z-50 flex items-center justify-center bg-[#c9c9c9] opacity-90 rounded-full w-9 h-9"
-          @click="prev"
-        >
-          <img src="../../assets/icons/left.svg" alt="" />
-        </button>
-        <Pagination />
-        <button
-          class="z-50 flex items-center justify-center bg-[#c9c9c9] opacity-90 rounded-full w-9 h-9"
-          @click="next"
-        >
-          <img src="../../assets/icons/right.svg" alt="" />
-        </button>
-      </div>
-    </div> -->
   </div>
 </template>
 

@@ -10,6 +10,8 @@
             <li
               v-for="(link, index) in menus"
               :key="index"
+              @click="choose(link.id)"
+              :class="{ active: link.id === activeID }"
               class="not-italic font-normal text-2xl leading-7 cursor-pointer hover:text-[#d8d7d7] text-white"
             >
               {{ link.title }}
@@ -37,8 +39,9 @@
               alt=""
             />
             <div class="ml-4">
-              <select class="cursor-pointer" name="" id="">
-                <option value="uzb">UZB</option>
+              <select class="cursor-pointer outline-none px-1 bg-transparent">
+                <option value="uzb">🇬🇧</option>
+                <option value="uzb">🇷🇺</option>
               </select>
             </div>
           </div>
@@ -59,13 +62,25 @@ export default {
     return {
       menus: [
         { id: 1, title: "Silk Road Destinations" },
-        { id: 1, title: "Tours" },
-        { id: 1, title: "Agency" },
-        { id: 1, title: "Blog" },
-        { id: 1, title: "Contact" },
+        { id: 2, title: "Tours" },
+        { id: 3, title: "Agency" },
+        { id: 4, title: "Blog" },
+        { id: 5, title: "Contact" },
       ],
+      activeID: false,
     };
+  },
+  methods: {
+    choose: function (id) {
+      this.activeID = id;
+    },
   },
   components: { Carousel },
 };
 </script>
+
+<style>
+.active {
+  color: #2898ff !important;
+}
+</style>
