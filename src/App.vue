@@ -26,13 +26,13 @@ import Main from "./layouts/main/Main.vue";
 export default {
   data() {
     return {
-      loader: true,
+      loader: false,
     };
   },
   mounted() {
     setTimeout(() => {
       this.loader = false;
-    }, 2000);
+    }, 3000);
   },
   name: "App",
   components: {
