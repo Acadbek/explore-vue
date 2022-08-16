@@ -56,22 +56,22 @@
           <img src="../../assets/icons/petit.svg" alt="" />
           <div class="flex items-center gap-4">
             <img
-              class="cursor-pointer"
+              class="cursor-pointer blur-sm hover:blur-0"
               src="../../assets/icons/facebook.svg"
               alt=""
             />
             <img
-              class="cursor-pointer"
+              class="cursor-pointer blur-sm hover:blur-0"
               src="../../assets/icons/insta.svg"
               alt=""
             />
             <img
-              class="cursor-pointer"
+              class="cursor-pointer blur-sm hover:blur-0"
               src="../../assets/icons/youtube.svg"
               alt=""
             />
             <img
-              class="cursor-pointer"
+              class="cursor-pointer blur-sm hover:blur-0"
               src="../../assets/icons/linkedin.svg"
               alt=""
             />
