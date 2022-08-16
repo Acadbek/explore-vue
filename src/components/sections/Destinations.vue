@@ -74,7 +74,6 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
-    Pagination,
   },
   data() {
     return {
