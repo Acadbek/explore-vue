@@ -175,8 +175,4 @@ export default defineComponent({
   display: flex;
   gap: 10px;
 }
-@media (max-width: 1035px) {
-  .ourServices {
-  }
-}
 </style>

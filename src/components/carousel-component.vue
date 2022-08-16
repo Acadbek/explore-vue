@@ -109,4 +109,9 @@ export default defineComponent({
   font-family: "El Messiri", sans-serif;
   font-weight: 700 !important;
 }
+@media (max-width: 450px) {
+  .main-title h1 {
+    font-size: 40px;
+  }
+}
 </style>

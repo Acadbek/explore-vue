@@ -79,7 +79,7 @@
         </div>
         <button
           @click="up"
-          class="absolute border rounded-full p-2 bottom-8 hover:border-[#949494] right-11"
+          class="absolute border rounded-full p-2 md:bottom-8 lg:bottom-8 bottom-[70px] hover:border-[#949494] right-11"
         >
           <img
             class="rotate-90"
@@ -108,6 +108,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   background-image: url("../../assets/images/footerBg.png");
+  margin-top: 40px;
   ul {
     color: white;
     li:hover {
