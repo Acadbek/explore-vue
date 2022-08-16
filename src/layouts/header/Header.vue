@@ -4,7 +4,9 @@
       <div class="container">
         <nav class="nav flex items-center justify-between h-[110px]">
           <div>
-            <img src="../../assets/icons/logo.svg" alt="" />
+            <a href="/">
+              <img src="../../assets/icons/logo.svg" alt="" />
+            </a>
           </div>
           <ul class="flex gap-10">
             <li
@@ -81,6 +83,6 @@ export default {
 
 <style>
 .active {
-  color: #2898ff !important;
+  color: #0073df !important;
 }
 </style>

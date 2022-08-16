@@ -48,7 +48,7 @@
               {{ slide.desc }}
             </p>
             <button
-              class="not-italic font-normal border-[#407BFF] border-2 py-4 px-8 rounded-full mt-5 text-base text-center uppercase text-[#407BFF]"
+              class="not-italic hover:text-[#1c50c0] hover:border-[#1c50c0] font-normal border-[#407BFF] border-2 py-4 px-8 rounded-full mt-5 text-base text-center uppercase text-[#407BFF]"
             >
               View more
             </button>
